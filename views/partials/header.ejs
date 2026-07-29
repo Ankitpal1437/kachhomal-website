@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title><%= typeof pageTitle !== 'undefined' ? pageTitle : 'Kachhomal Sweets — Ulhasnagar' %></title>
+  <meta name="description" content="Kachhomal Sweets, Ulhasnagar — traditional mithai and namkeen since 1952. Order online for festivals, gifting and weddings." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="/" class="brand">Kachhomal <small>EST. 1952</small></a>
+
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <% nav.forEach(function(item) { %>
+            <li><a href="<%= item.href %>" class="<%= active === item.href ? 'is-active' : '' %>"><%= item.label %></a></li>
+          <% }) %>
+        </ul>
+      </nav>
+
+      <div class="nav-cta">
+        <a href="/contact" class="btn btn-primary">Order & Enquiry</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <main>
